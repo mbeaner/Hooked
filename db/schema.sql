@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS hooked_db;
+
+CREATE DATABASE hooked_db;
