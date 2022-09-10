@@ -2,5 +2,20 @@
 
 </aside>
 <div class="gallery">
-    {{dob}}
+    <section>
+    <img src="/images/{{filename}}">
+
+    <div class="card-body">
+        <p id="match" hidden>{{match}}</p>
+        <h1>{{first_name}} {{last_name}}</h1>
+        <h2> Age: {{age dob}}</h2>
+        <h2>Gender: {{gender}}</h2>
+        <h2>Location: {{location}}</h2>
+        <h2>Email: {{email}}</h2>
+        <h2>Bio:</h2>
+        <p>{{bio}}</p>
+    </div>
+    
+
+</section>
 </div>

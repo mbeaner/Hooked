@@ -2,5 +2,30 @@
     <h2>Your catches</h2>
 </aside>
 <div class="gallery">
-    <h1>Hello Party People</h1>
+
+    {{#each user as |user|}}
+    <section class="card">
+        <img src="/images/{{filename}}">
+
+        <div class="card-body">
+            <p id="match" hidden>{{match}}</p>
+            <h1>{{first_name}} {{last_name}}</h1>
+            <h2>{{age dob}}</h2>
+            <h2>{{gender}}</h2>
+            <h2>Bio:</h2>
+            <p>{{bio}}</p>
+        </div>
+        <div id="firstbuttons">
+            <button class="btn btn-primary catch" id="catch" data-id="{{id}}">Catch</button>
+            <button class="btn btn-primary" id="release" data-id="{{id}}">Release</button>
+        </div>
+        <div id="secondbuttons" hidden>
+            <button class="btn btn-primary" id="profile">Profile</button>
+            <button class="btn btn-primary" id="message">Message</button>
+        </div>
+
+    </section>
+    {{/each}}
 </div>
+
+<script src="./js/homepage.js"></script>
