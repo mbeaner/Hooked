@@ -1,26 +1,26 @@
 <aside>
     <h2>Your catches</h2>
 </aside>
-<div class="gallery">
+<div class="gallery" id="gallery-container">
 
     {{#each user as |user|}}
-    <section class="card">
+    <section class="card" data-ismatch="{{match}}">
         <img src="/images/{{filename}}">
 
         <div class="card-body">
-            <p id="match" hidden>{{match}}</p>
+            <p class="match" hidden>{{match}}</p>
             <h1>{{first_name}} {{last_name}}</h1>
             <h2>{{age dob}}</h2>
             <h2>{{gender}}</h2>
             <h2>Bio:</h2>
             <p>{{bio}}</p>
         </div>
-        <div id="firstbuttons">
+        <div class="firstbuttons" data-id="{{id}}">
             <button class="btn btn-primary catch" id="catch" data-id="{{id}}">Catch</button>
-            <button class="btn btn-primary" id="release" data-id="{{id}}">Release</button>
+            <button class="btn btn-primary release" id="release" data-id="{{id}}">Release</button>
         </div>
-        <div id="secondbuttons" hidden>
-            <button class="btn btn-primary" id="profile">Profile</button>
+        <div id="secondbuttons" class="msg-section" hidden>
+            <a href="/profile/{{id}}"><button class="btn btn-primary" id="profile">Profile</button></a>
             <button class="btn btn-primary" id="message">Message</button>
         </div>
 
