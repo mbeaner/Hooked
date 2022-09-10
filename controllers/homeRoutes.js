@@ -50,4 +50,19 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+router.get('/profile/:id', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+
+    const user = userData.get({ plain: true });
+
+    res.render('matchprofile', {
+      ...user,
+      loggegIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
