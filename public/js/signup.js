@@ -2,6 +2,7 @@ const yearSelect = document.getElementById('year');
 const monthSelect = document.getElementById('month');
 const daySelect = document.getElementById('day');
 const genderSelect = document.getElementById('gender');
+const fileSelect = document.getElementById('filename');
 
 const months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 
@@ -100,7 +101,16 @@ const genders = ['Male', 'Female'];
     genderSelect.appendChild(option);
   }
 })();
-var dob = `${yearSelect.value}-${monthSelect.value}-${daySelect.value}`;
+
+const files = ['saw.jpg', '01-blossoming-apricot.jpg'];
+
+(function populateFiles() {
+  for (let i = 0; i < files.length; i++) {
+    const option = document.createElement('option');
+    option.textContent = files[i];
+    fileSelect.appendChild(option);
+  }
+})();
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -109,19 +119,22 @@ const signupFormHandler = async (event) => {
   const last_name = document.querySelector('#last-name').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-  // const picture = document.querySelector('#profile-pic').value.trim();
+  const filename = document.querySelector('#filename').value.trim();
+  var dob = `${yearSelect.value}-${monthSelect.value}-${daySelect.value}`;
   const gender = document.querySelector('#gender').value.trim();
   const location = document.querySelector('#location').value.trim();
+  const bio = document.querySelector('#bio').value.trim();
 
   if (
     first_name &&
     last_name &&
     email &&
     password &&
-    // picture &&
+    filename &&
     dob &&
     gender &&
-    location
+    location &&
+    bio
   ) {
     const response = await fetch('/api/users', {
       method: 'Post',
@@ -130,10 +143,11 @@ const signupFormHandler = async (event) => {
         last_name,
         email,
         password,
-        // picture,
+        filename,
         dob,
         gender,
         location,
+        bio,
       }),
       headers: { 'Content-Type': 'application/json' },
     });

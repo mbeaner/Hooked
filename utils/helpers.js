@@ -1,4 +1,5 @@
 module.exports = {
+  ifNotCurrentUser: (id1, id2) => id1 == id2,
   age: (dob) => {
     var date = dob.split('-');
     var birth_date = new Date(`${date[0]}, ${date[1]}, ${date[2]}`);

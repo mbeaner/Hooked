@@ -3,7 +3,20 @@ const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
-  res.render('homepage', { loggedIn: req.session.loggedIn });
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.map((user) => user.get({ plain: true }));
+
+    res.render('homepage', {
+      user,
+      loggegIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {

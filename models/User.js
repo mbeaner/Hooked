@@ -39,10 +39,10 @@ User.init(
         len: [8],
       },
     },
-    // filename: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     dob: {
       type: DataTypes.DATEONLY,
       allowNull: false,
@@ -54,6 +54,14 @@ User.init(
     location: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    match: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
   },
   {

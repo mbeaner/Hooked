@@ -1,7 +1,38 @@
 [
     {
-        "name": "Mark",
-        "email": "mark@gmail.com",
-        "password": "password"
+        "first_name": "Bruce",
+        "last_name": "Shark",
+        "email": "bruceshark@gmail.com",
+        "password": "password1",
+        "filename": "01-shark.jpg",
+        "dob": "2007-7-7",
+        "gender": "Male",
+        "location": "Detroit",
+        "bio": "Fish are friends. Not food.",
+        "match": "false"
+    },
+    {
+        "first_name": "Marlin",
+        "last_name": "Clownfish",
+        "email": "marlinclownfish@gmail.com",
+        "password": "password2",
+        "filename": "clownfish.jpg",
+        "dob": "2016-1-20",
+        "gender": "Male",
+        "location": "Southfield",
+        "bio": "Dont touch the butt",
+        "match": "false"
+    },
+    {
+        "first_name": "Angie",
+        "last_name": "Angelfish",
+        "email": "angieangel@gamil.com",
+        "password": "password3",
+        "filename": "angelfish.jpg",
+        "dob": "2015-5-8",
+        "gender": "Female",
+        "location": "Novi",
+        "bio": "blah blah",
+        "match": "true"
     }
 ]
