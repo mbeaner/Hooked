@@ -102,7 +102,13 @@ const genders = ['Male', 'Female'];
   }
 })();
 
-const files = ['saw.jpg', '01-blossoming-apricot.jpg'];
+const files = [
+  '01-shark.jpg',
+  'angelfish.jpg',
+  'clownfish.jpg',
+  'dori.jpg',
+  'oscar.jpg',
+];
 
 (function populateFiles() {
   for (let i = 0; i < files.length; i++) {

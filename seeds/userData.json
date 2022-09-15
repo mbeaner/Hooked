@@ -32,7 +32,19 @@
         "dob": "2015-5-8",
         "gender": "Female",
         "location": "Novi",
-        "bio": "blah blah",
+        "bio": "Just living my best fish life.",
+        "match": "true"
+    },
+    {
+        "first_name": "Dori",
+        "last_name": "BlueTang",
+        "email": "dori@gamil.com",
+        "password": "password4",
+        "filename": "dori.jpg",
+        "dob": "2015-5-8",
+        "gender": "Female",
+        "location": "Troy",
+        "bio": "Just keep swimming",
         "match": "true"
     }
 ]
