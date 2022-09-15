@@ -1,6 +1,6 @@
 ## About The Project
 
-![](public\images\MainPage.JPG)
+![](public/images/MainPage.JPG)
 
 There are a ton of dating websites out there that just don't work for most people. It can take months, if not YEARs, to come accross someone you truly enjoy and want to be with. Hooked is the dating site that may just land you a solid catch!
 
@@ -51,10 +51,10 @@ To get a local copy up and running follow these steps.
 ## Usage
 
 Once you've opened Hooked it's time to Log in! Fill out your personal info and sing up.
-![](public\images\Login.JPG)
+![](public/images/Login.JPG)
 
 After you've successfully signed up for the service you'll be taken to your profile.
-![](public\images\Profile.JPG)
+![](public/images/Profile.JPG)
 
 If you're satisfied with how you've chosen to present yourself go to the home screen and see who you can potentially match with!
 
@@ -66,5 +66,3 @@ Derek Hoye - dhoye144@gmail.com
 Mark Beaner - beaner.mark@yahoo.com
 
 Project Link: [https://https://github.com/mbeaner/Hooked](https://https://github.com/mbeaner/Hooked)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
